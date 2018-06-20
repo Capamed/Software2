@@ -1,22 +1,22 @@
 form{
-    width: 25%;
-    border: 1px solid black;
-    margin: 20px;
+    width:20%;
+    border: 2px solid black;
+    margin: 15px;
     padding: 20px;
 }
 
 label{
-    font-size: 12px;
+    font-size: 20px;
     display: block;
-    width: 100%;
+    width:100%;
 }
 
 input,textarea{
     margin-bottom: 20px;
-    width: 100%;
-    padding: 10px;
+    width:100%;
+    padding: 5px;
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 input:focus ,textarea:focus{
@@ -30,23 +30,21 @@ textarea{
 }
 
 input[type="submit"]{
-    margin-bottom: 0;
+    margin-bottom:10px;
+    margin: 8px;
+    width:45%;
+    background: cornflowerblue;
+    color: ghostwhite;
+    border: none;
+}
+input[type="reset"]{
+    margin-bottom:10px;
+    width:45%;
     background: cornflowerblue;
     color: ghostwhite;
     border: none;
 }
 input[type="submit"]:hover{
-    background: aqua;
-    cursor: pointer;
-}
-
-input[type="submit1"]{
-    margin-bottom: 0;
-    background: cornflowerblue;
-    color: ghostwhite;
-    border: none;
-}
-input[type="submit1"]:hover{
     background: aqua;
     cursor: pointer;
 }
