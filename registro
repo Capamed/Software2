@@ -1,0 +1,25 @@
+<?php
+    $nombre = $_POST['nombre'];
+    $nickname = $_POST['nickname'];
+    $password = $_POST['password'];
+    $repassword = $_POST['repassword'];
+    $direccion = $_POST['direccion'];
+    $telefono = $_POST['telefono'];
+    $email = $_POST['email'];
+    $reqlen = strlen($nombre)*strlen($nickname)*strlen($password)*strlen($repassword)*strlen($direccion)*strlen($telefono)*strlen($email);
+
+    if ($reqlen>0){
+        if($password==$repassword){
+            require("connect_db");
+            $password = md5 ($password);
+            mysql_query("INSERT INTO empresa VALUES ('','$nombre','$nickname','$password','$direccion','$telefono','$email')");
+            mysql_close($mysqli);
+            echo 'Se ha registrado exitosamente';
+        }else{
+            echo 'Por favor introduzca dos contraseñas identicas';
+        }
+    }else{
+        echo 'Por favor rellene todo los campos requeridos';
+    }
+
+
