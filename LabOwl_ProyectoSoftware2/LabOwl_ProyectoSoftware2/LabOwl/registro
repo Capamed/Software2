@@ -17,7 +17,7 @@
             mysqli_query("INSERT INTO empresa VALUES ('','$nombre','$nickname','$password','$direccion','$telefono','$email')");
 
             mysqli_close($mysqli);
-            
+
         }else{
             echo 'Por favor introduzca dos contraseñas identicas';
         }
