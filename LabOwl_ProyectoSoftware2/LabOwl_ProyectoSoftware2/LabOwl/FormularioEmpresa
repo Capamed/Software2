@@ -9,10 +9,9 @@
 
 </head>
 <body>
+<img src="img/EmpresaImgen.jpg" width="200">
 <h1>Registro de Empresa</h1>
-
-<form method="POST" action="" />
-
+<form method="POST" action="registro" />
 <table>
 
     <label for="nombre">Nombre de la Empresa: (*)</label>
