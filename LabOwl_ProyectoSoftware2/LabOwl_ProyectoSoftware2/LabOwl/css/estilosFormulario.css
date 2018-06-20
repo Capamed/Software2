@@ -49,6 +49,6 @@ input[type="submit"]:hover{
     cursor: pointer;
 }
 
-.formularioGeneral{
-    float: right;
+.imagenEmpresa{
+    width: 10px;
 }
