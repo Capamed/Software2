@@ -4,6 +4,7 @@ $user = "root";
 $pass = "";
 $db = "labowl";
 $enlace = mysqli_connect($host, $user, $pass, $db);
+
 if (!$enlace) {
     echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
     echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
@@ -12,4 +13,4 @@ if (!$enlace) {
 }
 echo "Éxito: Se realizó una conexión apropiada a MySQL!" . PHP_EOL;
 echo "Información del host: " . mysqli_get_host_info($enlace) . PHP_EOL;
-mysqli_close($enlace);
+
