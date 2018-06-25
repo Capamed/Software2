@@ -40,8 +40,11 @@
 
 <tr>
     <td>
-        <input type="submit" name="registrar" value="Registrar" />
+        <input type="submit" name="registrar Empresa" value="Registrar" />
         <input type="reset" name="restablecer" value="Restablecer"/>
+
+
+
     </td>
 </tr>
 

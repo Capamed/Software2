@@ -16,7 +16,7 @@
 
             $sql="INSERT INTO empresa (`nombreE`, `nicknameE`, `passwordE`, `direccionE`, `telefonoE`, `emailE`) VALUES ('$nombre','$nickname','$password','$direccion','$telefono','$email')";
 
-
+            echo 'Registro exitoso';
             mysqli_query($enlace,$sql);
 
             mysqli_close($enlace);
