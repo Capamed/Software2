@@ -1,0 +1,33 @@
+#PrimerTituloCarrusel {
+    font-size: 45px;
+    color: deepskyblue;
+    text-shadow: 1px 1px 10px black;
+}
+#PrimerParrafoCarrusel{
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px darkgray;
+}
+#SegundoTituloCarrusel{
+    font-size: 45px;
+    color: chartreuse;
+    text-shadow: 1px 1px 10px ghostwhite;
+}
+#SegundoParrafoCarrusel{
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px ghostwhite;
+}
+#TercerTituloCarrusel{
+    font-size: 45px;
+    color:white;
+    text-shadow: 1px 1px 10px darkgray;
+}
+#TercerParrafoCarrusel{
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px ghostwhite;
+}
