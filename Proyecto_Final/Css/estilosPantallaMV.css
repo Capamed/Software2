@@ -4,9 +4,9 @@
 }
 #TituloPantallaMV{
     font-size: 75px;
-    color: #ac2925;
+    color: white;
     font-weight: normal;
-    text-shadow: 1px 1px 10px #f4f4f4;
+    text-shadow: 1px 1px 20px black;
 }
 #ParrafoPantallaMV{
     font-size: 45px;
