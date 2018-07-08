@@ -1,6 +1,7 @@
 .jumbotron{
     background-image: url("../Imagenes/ImagenPrueba2.jpg");
     background-repeat:no-repeat ;
+    background: 100px;
 }
 #TituloPantallaMV{
     font-size: 75px;
