@@ -75,11 +75,10 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
             </div>
         </div>
 
+
         <input type="hidden" id="idEmpresa" name="idEmpresa" value="<?php echo $row['IDEMPRESA']; ?>" />
 
-
-
-
+        
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <a href="Mostrar.php" class="btn btn-default">Regresar</a>
