@@ -48,7 +48,6 @@
         <table class="table table-striped table-bordered text-center" >
             <thead> <!-- cabecera -->
             <tr>
-                <th>Acciones</th> <!-- columna vacia para agregar los botones de modificar y eliminar-->
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Nickname</th>
@@ -56,7 +55,7 @@
                 <th>Dirección</th>
                 <th>Teléfono</th>
                 <th>Email</th>
-
+                <th>Acciones</th> <!-- columna vacia para agregar los botones de modificar y eliminar-->
 
             </tr>
             </thead>
@@ -65,12 +64,6 @@
 
             <?php while($row = $resultado->fetch_array(MYSQLI_ASSOC)) { ?>
                 <tr>
-                    <td >
-                        <a href="Empresa/EmpresaM.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-pencil"></span></a>      |
-                        <a href="Empresa/EliminarE?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-trash"></span></a> <br>
-                        <a href="Producto/MostrarP.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="btn btn-primary">Mostrar Productos</span></a>
-
-                    </td>
                     <td><?php echo $row['IDEMPRESA']; ?></td>
                     <td><?php echo $row['NOMBREE']; ?></td>
                     <td><?php echo $row['NICKNAMEE']; ?></td>
@@ -78,7 +71,8 @@
                     <td><?php echo $row['DIRECCION']; ?></td>
                     <td><?php echo $row['TELEFONO']; ?></td>
                     <td><?php echo $row['EMAIL']; ?></td>
-
+                    <td ><a href="Empresa/EmpresaM.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-pencil"></span></a>      |
+                        <a href="Empresa/EliminarE?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-trash"></span></a></td>
 
                 </tr>
             <?php } ?>
@@ -86,11 +80,11 @@
             </tbody>
 
         </table>
-</div>
+    </div>
 
     <br> <br>
 
-    <div style="text-align: right;width:220px">
+    <div style="text-align: center;width:220px">
         <a href="Empresa/EmpresaG.php" class="btn btn-primary" >Nuevo Registro</a>
         <a href="Index.html" class="btn btn-primary" >Retornar</a>
     </div>

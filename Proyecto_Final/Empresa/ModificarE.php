@@ -1,6 +1,6 @@
 <?php
 
-require 'Conexion.php';
+require '../Conexion.php';
 $idEmpresa = $_POST['idEmpresa'];
 $nombreE = $_POST['nombreE'];
 $nicknameE = $_POST['nicknameE'];
@@ -9,21 +9,24 @@ $direccionE = $_POST['direccionE'];
 $telefonoE = $_POST['telefonoE'];
 $emailE = $_POST['emailE'];
 
-
-
-$sql = "UPDATE empresa SET nombreE = '$nombreE', nicknameE='$nicknameE', direccion='$direccionE', passwordE='$passwordE', telefono='$telefonoE', email='$emailE' WHERE idEmpresa='$idEmpresa'";
+$sql = "UPDATE empresa SET nombreE = '$nombreE', nicknameE='$nicknameE',
+ direccion='$direccionE', passwordE='$passwordE', telefono='$telefonoE', 
+ email='$emailE' WHERE idEmpresa='$idEmpresa'";
 $resultado = $mysqli->query($sql);
 
 ?>
+
+
+
 
 <html lang="es">
 <head>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.css" rel="stylesheet">
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <link href="../Css/bootstrap.min.css" rel="stylesheet">
+    <link href="../Css/bootstrap-theme.css" rel="stylesheet">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -36,7 +39,7 @@ $resultado = $mysqli->query($sql);
                 <h3>ERROR AL MODIFICAR</h3>
             <?php } ?>
 
-            <a href="Mostrar.php" class="btn btn-primary">Regresar</a>
+            <a href="../Mostrar.php" class="btn btn-primary">Regresar</a>
 
         </div>
     </div>

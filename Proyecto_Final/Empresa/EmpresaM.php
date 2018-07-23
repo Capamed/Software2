@@ -1,5 +1,6 @@
+
 <?php
-require 'Conexion.php';
+require("../Conexion.php");
 
 $idEmpresa = $_GET['idEmpresa'];
 
@@ -8,15 +9,15 @@ $resultado = $mysqli->query($sql);
 $row = $resultado->fetch_array(MYSQLI_ASSOC);
 ?>
 
-
 <html lang="es">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.css" rel="stylesheet">
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </head>
+
 
 <body>
 <div class="container">
@@ -30,7 +31,8 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
         <div class="form-group">
             <label for="nombreE" class="col-sm-2 control-label">Nombre</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="nombreE" name="nombreE" placeholder="Ingresa tu nombre de empresa" value="<?php echo $row['NOMBREE']; ?>" required>
+                <input type="text" class="form-control" id="nombreE" name="nombreE" placeholder="Ingresa tu nombre de empresa"
+                       value="<?php echo $row['NOMBREE']; ?>" required>
             </div>
         </div>
 
@@ -46,7 +48,8 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
         <div class="form-group">
             <label for="passwordE" class="col-sm-2 control-label">Password</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" id="passwordE" name="passwordE" placeholder="Ingresa una contraseña" value="<?php echo $row['PASSWORDE']; ?>" required>
+                <input type="password" class="form-control" id="passwordE" name="passwordE" placeholder="Ingresa una contraseña"
+                       value="<?php echo $row['PASSWORDE']; ?>" required>
             </div>
         </div>
 
@@ -55,7 +58,8 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
         <div class="form-group">
             <label for="direccionE" class="col-sm-2 control-label">Dirección</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="direccionE" name="direccionE" placeholder="Ingresa la dirección de la Empresa" value="<?php echo $row['DIRECCION']; ?>" required>
+                <input type="text" class="form-control" id="direccionE" name="direccionE" placeholder="Ingresa la dirección de la Empresa"
+                       value="<?php echo $row['DIRECCION']; ?>" required>
             </div>
         </div>
 
@@ -81,7 +85,7 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
         
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <a href="Mostrar.php" class="btn btn-default">Regresar</a>
+                <a href="../Mostrar.php" class="btn btn-default">Regresar</a>
                 <button type="submit" class="btn btn-primary">Modificar</button>
             </div>
         </div>

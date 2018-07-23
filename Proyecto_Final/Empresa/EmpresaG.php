@@ -1,10 +1,10 @@
 <html lang="es">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.css" rel="stylesheet">
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -13,7 +13,8 @@
         <h3 style="text-align:center">NUEVO REGISTRO DE EMPRESA</h3>
     </div>
 
-    <form class="form-horizontal" method="POST" action="GuardarE.php" autocomplete="off">
+    <form class="form-horizontal" method="POST" action="GuardarE.php"
+          enctype="multipart/form-data"  autocomplete="ON"> <!--enctype nos va a permitir agregar Y ENVIAR archivos o imagenes en un input de tipo file.-->
 
 
         <div class="form-group">
@@ -65,11 +66,17 @@
         </div>
 
 
+       <!--<div class="form-group">
+            <label for="archivoE" class="col-sm-2 control-label">Imagen</label>
+            <div class="col-sm-10">
+                <input type="file" class="form-control" id="archivo" name="archivo" > <!--accept permite aceptar un tipo especifico de archivos
+            </div>
+        </div>-->
 
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <a href="Mostrar.php" class="btn btn-default">Regresar</a>
+                <a href="../Mostrar.php" class="btn btn-default">Regresar</a>
                 <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
         </div>
