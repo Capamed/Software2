@@ -1,0 +1,25 @@
+.jumbotronm{
+    background-image: url("../Imagenes/CostoServicios2.jpg");
+    background-repeat:no-repeat ;
+}
+.display-3{
+
+}
+#TituloPantallaSC{
+    font-size: 100px;
+    color: #c4e3f3;
+    font-weight: normal;
+    text-shadow: 1px 8px 10px black;
+}
+#Parrafoinicial{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px black;
+}
+#frasemovilinicial{
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px lightgoldenrodyellow;
+}
