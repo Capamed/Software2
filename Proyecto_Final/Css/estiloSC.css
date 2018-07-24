@@ -1,12 +1,35 @@
 .jumbotronm{
     background-image: url("../Imagenes/CostoServicios2.jpg");
     background-repeat:no-repeat ;
-}
-.display-3{
+    box-shadow: 0 0 20px rgba(0,0,0,0.54);
+    position:relative;
 
 }
+
+.container2{
+
+    margin-left:150px;
+    margin-right: 150px;
+    margin-top:5%;
+}
+
+#img1{
+    margin-right: 7px;
+    box-shadow: 8px 5px 7px #761c19;
+}
+
+#img2{
+    margin-right: 7px;
+    box-shadow: 8px 5px 7px #122b40;
+}
+
+#img3{
+    margin-right: 7px;
+    box-shadow: 8px 5px 7px #2b542c;
+}
+
 #TituloPantallaSC{
-    font-size: 100px;
+    font-size: 90px;
     color: #c4e3f3;
     font-weight: normal;
     text-shadow: 1px 8px 10px black;
