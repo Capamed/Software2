@@ -39,7 +39,7 @@ SAL='$sal',SODIO='$sodio',CARBOHIDRATOS='$carbohidratos',FIBRADIETETICA='$fibraD
 AZUCAR='$azucar',PROTEINAS='$proteinas',HIERRO='$hierro',VITAMINAA='$vitamA',
 VITAMINAC='$vitamC',VITAMINAD='$vitamD',VITAMINAB1='$vitamB1',VITAMINAB2='$vitamB2',
 VITAMINAB12='$vitamB12',VITAMINAB6='$vitamB6',CALCIO='$calcio',FOSFORO='$fosforo',
-MAGNESIO='$magnesio',ZINC='$zinc',POTASIO='$potasio' WHERE IDEMPRESA='$idEmpresa'";
+MAGNESIO='$magnesio',ZINC='$zinc',POTASIO='$potasio' WHERE IDPRODUCTO='$idProducto'";
 
 $resultado = $mysqli->query($sql);
 

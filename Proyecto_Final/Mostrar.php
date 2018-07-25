@@ -1,4 +1,5 @@
 
+
 <html lang="es">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!--detecta un dispositivo para adaptar la pantalla-->
@@ -24,7 +25,6 @@
     $resultado = $mysqli->query($sql);
     ?>
 </head>
-
 
 
 
