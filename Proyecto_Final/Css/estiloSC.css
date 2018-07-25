@@ -35,6 +35,23 @@
     text-align: center;
     display: inline-block;
 }
+.container5{
+    padding:10px;
+    color:#fff;
+    margin-top:5%;
+    background:#f0ad4e;
+    background-image: url("../Imagenes/fondosemaforo.jpg");
+    box-shadow: 0 0 20px rgba(0,0,0,0.54);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100% ;
+    text-align: center;
+    display: inline-block;
+}
+
 
 
 .lead2{
@@ -76,8 +93,8 @@
     text-shadow: 1px 8px 10px black;
 }
 #Parrafoinicial{
-    font-size: 20px;
-    color: white;
+    font-size: 25px;
+    color: #e3e3e3;
     font-weight: bold;
     text-shadow: 1px 1px 10px black;
 }
