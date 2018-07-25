@@ -12,6 +12,47 @@
     margin-right: 150px;
     margin-top:5%;
 }
+.container3{
+
+    margin-left:150px;
+    margin-right: 150px;
+    margin-top:2%;
+}
+
+.container4{
+    padding:10px;
+    color:#fff;
+    margin-top:5%;
+    background:#f0ad4e;
+    background-image: url("../Imagenes/fondoetiqueta.jpg");
+    box-shadow: 0 0 20px rgba(0,0,0,0.54);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100% ;
+    text-align: center;
+    display: inline-block;
+}
+
+
+.lead2{
+    font: 25px "Comic Sans MS", cursive;
+
+    text-shadow: 3px 3px 2px #696;
+    color: #122b40;
+}
+.lead3{
+    margin: 20px 5px 20px 5px;
+    font-size:18px;
+    font-weight:350;
+
+    padding: 10px;
+    background: rgba(0,0,0,0.5);
+    display: inline-block;
+}
+
 
 #img1{
     margin-right: 7px;
