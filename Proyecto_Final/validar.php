@@ -19,7 +19,7 @@ $password = $_POST['password'];
     $password1 = $row['PASSWORDE'];
     if ($nombre == $username && $password1 == $password) {
         $id =$row['IDEMPRESA'];
-        header("Location: Mostrar.php ");
+        header("Location: MostrarP.php?idEmpresa=$id");
     } else {
         echo '<META HTTP-EQUIV="Refresh" CONTENT="0; URL=Login.php">
               <SCRIPT LANGUAGE="javascript"> 
