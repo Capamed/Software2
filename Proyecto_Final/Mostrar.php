@@ -67,7 +67,7 @@
                 <tr>
                     <td >
                         <a href="Empresa/EmpresaM.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-pencil"></span></a>      |
-                        <a href="Empresa/EliminarE?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-trash"></span></a> <br>
+                        <a href="Empresa/EliminarE.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-trash"></span></a> <br>
                         <a href="Producto/MostrarP.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="btn btn-primary">Mostrar Productos</span></a>
 
                     </td>
