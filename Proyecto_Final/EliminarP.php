@@ -1,15 +1,15 @@
 <?php
-require '../Conexion.php';
+require 'Conexion.php';
 $idProducto = $_GET['idProducto'];
 /*Script para eliminar*/
 
-$sql1 = "SELECT * FROM producto WHERE IDPRODUCTO = '$idProducto'";
+$sql1 = "SELECT * FROM PRODUCTO WHERE IDPRODUCTO = '$idProducto'";
 $resultado1 = $mysqli->query($sql1);
-$row = $resultado1->fetch_array(MYSQLI_ASSOC);
+$row = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
 
 
 
-$sql = "DELETE FROM PRODUCTO WHERE idProducto='$idProducto'";
+$sql = "DELETE FROM PRODUCTO WHERE IDPRODUCTO='$idProducto'";
 $resultado = $mysqli->query($sql);
 ?>
 

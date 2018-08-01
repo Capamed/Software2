@@ -3,7 +3,7 @@
 $idEmpresa = $_GET['idEmpresa'];
 
 
-require '../Conexion.php';
+require 'Conexion.php';
 $idProducto = $_POST['idProducto'];
 $nombreP = $_POST['nombreP'];
 $cantidad = $_POST['cantidad'];
@@ -33,7 +33,7 @@ $zinc = $_POST['zinc'];
 $potasio = $_POST['potasio'];
 
 
-$sql = "UPDATE producto SET  NOMBREP='$nombreP',CANTIDAD='$cantidad',PORCION='$porcion',
+$sql = "UPDATE PRODUCTO SET  NOMBREP='$nombreP',CANTIDAD='$cantidad',PORCION='$porcion',
 ENERGIA='$energia',GRASA='$grasa',GRASASATURADA='$grasaS',COLESTEROL='$colesterol',
 SAL='$sal',SODIO='$sodio',CARBOHIDRATOS='$carbohidratos',FIBRADIETETICA='$fibraD',
 AZUCAR='$azucar',PROTEINAS='$proteinas',HIERRO='$hierro',VITAMINAA='$vitamA',

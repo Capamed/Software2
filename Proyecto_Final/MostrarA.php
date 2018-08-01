@@ -62,7 +62,7 @@
 
             <tbody>
 
-            <?php while($row = $resultado->fetch_array(MYSQLI_ASSOC)) { ?>
+            <?php while($row = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) { ?>
                 <tr>
                     <td><?php echo $row['IDEMPRESA']; ?></td>
                     <td><?php echo $row['NOMBREE']; ?></td>

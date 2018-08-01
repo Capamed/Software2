@@ -9,9 +9,9 @@ $direccionE = $_POST['direccionE'];
 $telefonoE = $_POST['telefonoE'];
 $emailE = $_POST['emailE'];
 
-$sql = "UPDATE empresa SET nombreE = '$nombreE', nicknameE='$nicknameE',
- direccion='$direccionE', passwordE='$passwordE', telefono='$telefonoE', 
- email='$emailE' WHERE idEmpresa='$idEmpresa'";
+$sql = "UPDATE EMPRESA SET NOMBREE = '$nombreE', NICKNAMEE='$nicknameE',
+ DIRECCION='$direccionE', PASSWORDE='$passwordE', TELEFONO='$telefonoE', 
+ EMAIL='$emailE' WHERE IDEMPRESA='$idEmpresa'";
 $resultado = $mysqli->query($sql);
 
 ?>
@@ -23,8 +23,8 @@ $resultado = $mysqli->query($sql);
 <head>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../Css/bootstrap.min.css" rel="stylesheet">
-    <link href="../Css/bootstrap-theme.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 
@@ -37,7 +37,7 @@ $resultado = $mysqli->query($sql);
 <body>
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <img src="../Imagenes/IconoEmpresa.ico" width="50"/>
+        <img src="Imagenes/IconoEmpresa.ico" width="50"/>
         <a class="navbar-brand" href="#">LABOWL</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -61,7 +61,7 @@ $resultado = $mysqli->query($sql);
                 <h3>ERROR AL MODIFICAR</h3>
             <?php } ?>
 
-            <a href="../Mostrar.php" class="btn btn-primary">Regresar</a>
+            <a href="Mostrar.php" class="btn btn-primary">Regresar</a>
 
         </div>
     </div>

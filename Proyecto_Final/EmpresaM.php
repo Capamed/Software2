@@ -1,12 +1,12 @@
 
 <?php
-require("../Conexion.php");
+require("Conexion.php");
 
 $idEmpresa = $_GET['idEmpresa'];
 
-$sql = "SELECT * FROM empresa WHERE IDEMPRESA = '$idEmpresa'";
+$sql = "SELECT * FROM EMPRESA WHERE IDEMPRESA = '$idEmpresa'";
 $resultado = $mysqli->query($sql);
-$row = $resultado->fetch_array(MYSQLI_ASSOC);
+$row = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
 ?>
 
 <html lang="es">
@@ -26,7 +26,7 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
 <body>
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <img src="../Imagenes/IconoEmpresa.ico" width="50"/>
+        <img src="Imagenes/IconoEmpresa.ico" width="50"/>
         <a class="navbar-brand" href="#">LABOWL</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -113,7 +113,7 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
         
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <a href="../Mostrar.php" class="btn btn-default">Regresar</a>
+                <a href="Mostrar.php" class="btn btn-default">Regresar</a>
                 <button type="submit" class="btn btn-primary">Modificar</button>
             </div>
         </div>

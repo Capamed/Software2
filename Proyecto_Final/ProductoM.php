@@ -1,12 +1,12 @@
 
 <?php
-require("../Conexion.php");
+require("Conexion.php");
 
 $idProducto = $_GET['idProducto'];
 
-$sql = "SELECT * FROM producto WHERE IDPRODUCTO = '$idProducto'";
+$sql = "SELECT * FROM PRODUCTO WHERE IDPRODUCTO = '$idProducto'";
 $resultado = $mysqli->query($sql);
-$row = $resultado->fetch_array(MYSQLI_ASSOC);
+$row = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
 ?>
 
 <html lang="es">

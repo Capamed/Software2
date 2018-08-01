@@ -1,9 +1,9 @@
 
 <?php
-require '../Conexion.php';
+require 'Conexion.php';
 $idEmpresa = $_GET['idEmpresa'];
 /*Script para eliminar*/
-$sql = "DELETE FROM empresa WHERE idEmpresa='$idEmpresa'";
+$sql = "DELETE FROM EMPRESA WHERE IDEMPRESA='$idEmpresa'";
 $resultado = $mysqli->query($sql);
 ?>
 

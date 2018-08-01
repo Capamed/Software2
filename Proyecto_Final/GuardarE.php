@@ -1,6 +1,6 @@
 <?php
 
-require '../Conexion.php';
+require 'Conexion.php';
 
 $nombreE = $_POST['nombreE'];
 $nicknameE = $_POST['nicknameE'];
@@ -11,7 +11,7 @@ $telefonoE = $_POST['telefonoE'];
 $emailE = $_POST['emailE'];
 
 
-$sql = "INSERT INTO empresa (nombreE, nicknameE, passwordE, direccion, telefono, email) 
+$sql = "INSERT INTO EMPRESA (NOMBREE, NICKNAMEE, PASSWORDE, DIRECCION, TELEFONO, EMAIL) 
 VALUES ('$nombreE', '$nicknameE', '$passwordE', '$direccionE', '$telefonoE', '$emailE')";
 
 $resultado = $mysqli->query($sql);
@@ -71,7 +71,7 @@ $idEmpresa=$mysqli->insert_id; //esta funcion me trae el ID que se haya insertad
 <body>
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <img src="../Imagenes/IconoEmpresa.ico" width="50"/>
+        <img src="Imagenes/IconoEmpresa.ico" width="50"/>
         <a class="navbar-brand" href="#">LABOWL</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -94,7 +94,7 @@ $idEmpresa=$mysqli->insert_id; //esta funcion me trae el ID que se haya insertad
                 <h3>ERROR AL GUARDAR</h3>
             <?php } ?>
 
-            <a href="../Mostrar.php" class="btn btn-primary">Regresar</a>
+            <a href="Mostrar.php" class="btn btn-primary">Regresar</a>
 
         </div>
     </div>
