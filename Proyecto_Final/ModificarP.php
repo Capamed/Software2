@@ -43,6 +43,78 @@ MAGNESIO='$magnesio',ZINC='$zinc',POTASIO='$potasio' WHERE IDPRODUCTO='$idProduc
 
 $resultado = $mysqli->query($sql);
 
+
+
+//*********************************************************MODIFICAR SEMAFORO NUTRICIONAL*********************************************************
+
+$SalTotal= floatval($sal)*0.4*1000+floatval($sodio)*0.1*1000;
+$grasaTotal=floatval($grasa)+floatval($grasaS);
+
+$valorSalTotal;
+$valorAzucar;
+$valorGrasaTotal;
+
+if($azucar>=15){
+    $valorAzucar="ALTO";
+}else if($azucar>5 && $azucar<15){
+    $valorAzucar="MEDIO";
+}else{
+
+    $valorAzucar="BAJO";
+}
+
+
+if($SalTotal>=600){
+    $valorSalTotal="ALTO";
+}else if($SalTotal>120 && $SalTotal<600){
+    $valorSalTotal="MEDIO";
+}else{
+    $valorSalTotal="BAJO";
+}
+
+
+if($grasaTotal>=20){
+    $valorGrasaTotal="ALTO";
+}else if($grasaTotal>3 && $grasaTotal<20){
+    $valorGrasaTotal="MEDIO";
+}else{
+    $valorGrasaTotal="BAJO";
+}
+
+$sql1="Select * FROM SEMAFORONUTRIICONAL where IDPRODUCTO=$idProducto";
+$resultado1=$mysqli->query($sql1);
+
+$row1 = mysqli_fetch_array($resultado1,MYSQLI_ASSOC);
+
+$idSemaforo = $row1['IDSEMAFORO'];
+
+
+
+$sql2= "UPDATE SEMAFORONUTRIICONAL SET IDPRODUCTO='$idProducto',GRASAS='$valorGrasaTotal',AZUCARS='$valorAzucar',SODIOS='$valorSalTotal' WHERE IDSEMAFORO='$idSemaforo'";
+$resultado2 = $mysqli->query($sql2);
+
+
+
+
+
+//***************************************************CALCULOS PARA MODIFICAR LA ETIQUETA NUTRICIONAL**************************************************
+
+$sql4="Select * FROM  ETIQUETANUTRICIONAL where IDPRODUCTO=$idProducto";
+$resultado4=$mysqli->query($sql4);
+
+$row2 = mysqli_fetch_array($resultado4,MYSQLI_ASSOC);
+$idEtiqueta = $row2['IDETIQUETA'];
+
+
+$sql5= "UPDATE ETIQUETANUTRICIONAL SET IDPRODUCTO='$idProducto',ENERGIAT='$energia',GRASAT='$grasaTotal', COLESTEROLT='$colesterol',SODIOT='$SalTotal',CARBOHIDRATOT='$carbohidratos',PROTEINAT='$proteinas' WHERE IDETIQUETA='$idEtiqueta'";
+
+
+$resultado3 = $mysqli->query($sql5);
+
+
+
+
+
 ?>
 
 
@@ -52,24 +124,20 @@ $resultado = $mysqli->query($sql);
 <head>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../Css/bootstrap.min.css" rel="stylesheet">
-    <link href="../Css/bootstrap-theme.css" rel="stylesheet">
-    <script src="../js/jquery-3.1.1.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+    <link href="Css/bootstrap.min.css" rel="stylesheet">
+    <link href="Css/bootstrap-theme.css" rel="stylesheet">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
 
-<?php
-
-
-?>
 <div class="container">
     <div class="row">
         <div class="row" style="text-align:center">
-            <?php if($resultado) { ?>
-                <h3>REGISTRO MODIFICADO</h3>
+            <?php if($resultado && $resultado2 && $resultado3) { ?>
+                <h3>REGISTRO Y ETIQUETAS MODIFICADAS</h3>
             <?php } else { ?>
                 <h3>ERROR AL MODIFICAR</h3>
             <?php } ?>

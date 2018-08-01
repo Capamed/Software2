@@ -12,10 +12,10 @@ $row = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
 <html lang="es">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/bootstrap-theme.css" rel="stylesheet">
-    <script src="../js/jquery-3.1.1.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+    <link href="Css/bootstrap.min.css" rel="stylesheet">
+    <link href="Css/bootstrap-theme.css" rel="stylesheet">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 
 
@@ -250,9 +250,6 @@ $row = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
                 <a href="MostrarP.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="btn btn-primary">Regresar</span></a>
 
                 <button type="submit" class="btn btn-primary">Modificar</button>
-
-
-
 
 
 

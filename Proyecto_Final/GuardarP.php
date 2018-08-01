@@ -42,64 +42,92 @@ VALUES ('$idEmpresa','$nombreP','$cantidad', '$porcion','$energia','$grasa',
 '$vitamB12','$vitamB6','$calcio','$fosforo','$magnesio','$zinc','$potasio')";
 
 
-
-
 $resultado = $mysqli->query($sql);
 
-/*
-  if($_FILES["archivo"]["error"]>0) {//Me permite recibir un archivo y evaluar si existe un error o este vacio
-    echo "Error al cargar archivo";
+
+//***************************************************CALCULOS PARA EL SEMAFORO NUTRICIONAL**************************************************
+
+
+$id_Producto= $mysqli->insert_id;
+$SalTotal= floatval($sal)*0.4*1000+floatval($sodio)*0.1*1000;
+$grasaTotal=floatval($grasa)+floatval($grasaS);
+
+$valorSalTotal;
+$valorAzucar;
+$valorGrasaTotal;
+
+if($azucar>=15){
+    $valorAzucar="ALTO";
+}else if($azucar>5 && $azucar<15){
+    $valorAzucar="MEDIO";
 }else{
-    $permitidos = array("image/gif","image/png","application/pdf","image/jpeg");
-    $limite_kb=200; //para el tamanio de mi archivo en Kb
 
-    if(in_array($_FILES["archivo"]["type"],$permitidos)&& $_FILES['archivo']['size']<=$limite_kb*1024){//me permite buscar dentro del array la extension del archivo y del campo que tiene en la variable permitidos (nos envia un true o false) y tambien se evalua que no supere ellimite extabklecido
-        $ruta='FilesImages/'; //ruta donde se guardar el archivo perteneciente al id
-        $archivo =$ruta.$idEmpresa; //defino el nombre de mi archivo
-
-        if(!file_exists($ruta)) {//verificar si no existe la ruta la crearemo
-            mkdir($ruta);
-        }
-        if(!file_exist($archivo)) {//validacion de que no exista archivos duplicados
-            $resultado=@move_uploaded_file($_FILES["archivo"]["tmp_name"],$archivo);//guardar el archivo indicando la ruta a la que voy a mover del formulario
-            //tmp_name es el nombre temporal que se la da a un archivo cuando se lo carga al formulario
-            if($resultado){ //como me retorna un true o false lo anterior entonces se evalua si es verdadero
-                echo "Archivo guardado";
-            }else{
-                echo "Error al guardar el archivo";
-
-            }
-
-        }else{
-            echo "Archivo ya existe";
-        }
-    }else{
-    echo "Archivo no permitido o excede el tamaño";
-    }
-
+    $valorAzucar="BAJO";
 }
-*/
+
+
+if($SalTotal>=600){
+    $valorSalTotal="ALTO";
+}else if($SalTotal>120 && $SalTotal<600){
+    $valorSalTotal="MEDIO";
+}else{
+
+    $valorSalTotal="BAJO";
+}
+
+
+if($grasaTotal>=20){
+    $valorGrasaTotal="ALTO";
+}else if($grasaTotal>3 && $grasaTotal<20){
+    $valorGrasaTotal="MEDIO";
+}else{
+
+    $valorGrasaTotal="BAJO";
+}
+
+$sql2= "INSERT INTO SEMAFORONUTRIICONAL (IDPRODUCTO,GRASAS,AZUCARS,SODIOS)
+VALUES('$id_Producto','$valorGrasaTotal','$valorAzucar','$valorSalTotal')";
+
+$resultado2=$mysqli->query($sql2);
+
+
+//***************************************************CALCULOS PARA LA ETIQUETA NUTRICIONAL**************************************************
+
+
+
+
+
+$sql1 = "INSERT INTO ETIQUETANUTRICIONAL (IDPRODUCTO,ENERGIAT,GRASAT,COLESTEROLT,SODIOT, 
+CARBOHIDRATOT,PROTEINAT) 
+VALUES ('$id_Producto','$energia','$grasaTotal', '$colesterol','$SalTotal','$carbohidratos',
+'$proteinas')";
+
+$resultado1 = $mysqli->query($sql1);
+
+
 
 ?>
+
+
 
 <html lang="es">
 <head>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/bootstrap-theme.css" rel="stylesheet">
-    <script src="../js/jquery-3.1.1.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+    <link href="Css/bootstrap.min.css" rel="stylesheet">
+    <link href="Css/bootstrap-theme.css" rel="stylesheet">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
 <div class="container">
     <div class="row">
         <div class="row" style="text-align:center">
-            <?php if($resultado) { ?>
-                <h3>REGISTRO GUARDADO</h3>
+            <?php if($resultado && $resultado2 && $resultado1) { ?>
+                <h3>REGISTRO GUARDADO Y ETIQUETAS GENERADAS </h3>
             <?php } else { ?>
-                <h3>ERROR AL GUARDAR</h3>
+                <h3>ERROR AL GUARDAR O AL GENERAR ETIQUETAS</h3>
             <?php } ?>
 
             <a href="MostrarP.php?idEmpresa=<?php echo $idEmpresa?>" class="btn btn-primary">Regresar</a>
