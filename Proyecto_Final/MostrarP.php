@@ -24,7 +24,7 @@
             $where = "WHERE NOMBREP LIKE '%$valor%' OR IDPRODUCTO LIKE '%$valor%'";
         }
     }
-    $sql = "SELECT * FROM Producto $where";
+    $sql = "SELECT * FROM PRODUCTO $where";
     $resultado = $mysqli->query($sql);
     ?>
 </head>

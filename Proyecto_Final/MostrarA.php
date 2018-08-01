@@ -62,7 +62,7 @@
 
             <tbody>
 
-            <?php while($row = $resultado->fetch_array(MYSQLI_ASSOC)) { ?>
+            <?php while($row = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) { ?>
                 <tr>
                     <td><?php echo $row['IDEMPRESA']; ?></td>
                     <td><?php echo $row['NOMBREE']; ?></td>
@@ -72,7 +72,7 @@
                     <td><?php echo $row['TELEFONO']; ?></td>
                     <td><?php echo $row['EMAIL']; ?></td>
                     <td ><a href="Empresa/EmpresaM.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-pencil"></span></a>      |
-                        <a href="Empresa/EliminarE?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-trash"></span></a></td>
+                        <a href="Empresa/EliminarE.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-trash"></span></a></td>
 
                 </tr>
             <?php } ?>

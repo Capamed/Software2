@@ -1,14 +1,3 @@
-
-<?php
-require("../Conexion.php");
-
-$idEmpresa = $_GET['idEmpresa'];
-
-$sql = "SELECT * FROM empresa WHERE IDEMPRESA = '$idEmpresa'";
-$resultado = $mysqli->query($sql);
-$row = $resultado->fetch_array(MYSQLI_ASSOC);
-?>
-
 <html lang="es">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,19 +11,18 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
 
 </head>
 
-
 <body>
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <img src="../Imagenes/IconoEmpresa.ico" width="50"/>
+        <img src="Imagenes/IconoEmpresa.ico" width="50"/>
         <a class="navbar-brand" href="#">LABOWL</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#MODIFICAR REGISTRO DE LA EMPRESA">MODIFICAR REGISTRO DE LA EMPRESA<span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#NUEVO REGISTRO DE EMPRESA">NUEVO REGISTRO DE EMPRESA<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href=""></a>
@@ -50,17 +38,21 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
 <br/>
 <br/>
 <br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 <div class="container">
 
-    <form class="form-horizontal" method="POST" action="ModificarE.php" autocomplete="off">
+    <form class="form-horizontal" method="POST" action="GuardarE.php"
+          enctype="multipart/form-data"  autocomplete="ON"> <!--enctype nos va a permitir agregar Y ENVIAR archivos o imagenes en un input de tipo file.-->
 
 
         <div class="form-group">
             <label for="nombreE" class="col-sm-2 control-label">Nombre</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="nombreE" name="nombreE" placeholder="Ingresa tu nombre de empresa"
-                       value="<?php echo $row['NOMBREE']; ?>" required>
+                <input type="text" class="form-control" id="nombreE" name="nombreE" placeholder="Ingresa tu nombre de empresa" required>
             </div>
         </div>
 
@@ -68,7 +60,7 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
         <div class="form-group">
             <label for="nicknameE" class="col-sm-2 control-label">Nickname</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="nicknameE" name="nicknameE" placeholder="Ingresa tu nickname" value="<?php echo $row['NICKNAMEE']; ?>" required>
+                <input type="text" class="form-control" id="nicknameE" name="nicknameE" placeholder="Ingresa tu nickname" required>
             </div>
         </div>
 
@@ -76,8 +68,7 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
         <div class="form-group">
             <label for="passwordE" class="col-sm-2 control-label">Password</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" id="passwordE" name="passwordE" placeholder="Ingresa una contraseña"
-                       value="<?php echo $row['PASSWORDE']; ?>" required>
+                <input type="password" class="form-control" id="passwordE" name="passwordE" placeholder="Ingresa una contraseña" required>
             </div>
         </div>
 
@@ -86,8 +77,7 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
         <div class="form-group">
             <label for="direccionE" class="col-sm-2 control-label">Dirección</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="direccionE" name="direccionE" placeholder="Ingresa la dirección de la Empresa"
-                       value="<?php echo $row['DIRECCION']; ?>" required>
+                <input type="text" class="form-control" id="direccionE" name="direccionE" placeholder="Ingresa la dirección de la Empresa" required>
             </div>
         </div>
 
@@ -95,7 +85,7 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
         <div class="form-group">
             <label for="telefonoE" class="col-sm-2 control-label">Telefono</label>
             <div class="col-sm-10">
-                <input type="tel" class="form-control" id="telefonoE" name="telefonoE" placeholder="Ingresa un número de teléfono" value="<?php echo $row['TELEFONO']; ?>" required>
+                <input type="tel" class="form-control" id="telefonoE" name="telefonoE" placeholder="Ingresa un número de teléfono" required>
             </div>
         </div>
 
@@ -103,18 +93,23 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
         <div class="form-group">
             <label for="emailE" class="col-sm-2 control-label">Email</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="emailE" name="emailE" placeholder="Ingresa un email" value="<?php echo $row['EMAIL']; ?>" required>
+                <input type="email" class="form-control" id="emailE" name="emailE" placeholder="Ingresa un email" required>
             </div>
         </div>
 
 
-        <input type="hidden" id="idEmpresa" name="idEmpresa" value="<?php echo $row['IDEMPRESA']; ?>" />
+       <!--<div class="form-group">
+            <label for="archivoE" class="col-sm-2 control-label">Imagen</label>
+            <div class="col-sm-10">
+                <input type="file" class="form-control" id="archivo" name="archivo" > <!--accept permite aceptar un tipo especifico de archivos
+            </div>
+        </div>-->
 
-        
+
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <a href="../Mostrar.php" class="btn btn-default">Regresar</a>
-                <button type="submit" class="btn btn-primary">Modificar</button>
+                <a href="Mostrar.php" class="btn btn-default">Regresar</a>
+                <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
         </div>
     </form>

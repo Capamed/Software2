@@ -21,7 +21,7 @@
             $where = "WHERE NOMBREE LIKE '%$valor%' OR IDEMPRESA LIKE '%$valor%'";
         }
     }
-    $sql = "SELECT * FROM Empresa $where";
+    $sql = "SELECT * FROM EMPRESA $where";
     $resultado = $mysqli->query($sql);
     ?>
 </head>
@@ -63,11 +63,11 @@
 
             <tbody>
 
-            <?php while($row = $resultado->fetch_array(MYSQLI_ASSOC)) { ?>
+            <?php while($row = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) { ?>
                 <tr>
                     <td >
                         <a href="Empresa/EmpresaM.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-pencil"></span></a>      |
-                        <a href="Empresa/EliminarE?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-trash"></span></a> <br>
+                        <a href="Empresa/EliminarE.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-trash"></span></a> <br>
                         <a href="Producto/MostrarP.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="btn btn-primary">Mostrar Productos</span></a>
 
                     </td>

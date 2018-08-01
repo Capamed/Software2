@@ -1,9 +1,15 @@
-
 <?php
-require '../Conexion.php';
-$idEmpresa = $_GET['idEmpresa'];
+require 'Conexion.php';
+$idProducto = $_GET['idProducto'];
 /*Script para eliminar*/
-$sql = "DELETE FROM empresa WHERE idEmpresa='$idEmpresa'";
+
+$sql1 = "SELECT * FROM PRODUCTO WHERE IDPRODUCTO = '$idProducto'";
+$resultado1 = $mysqli->query($sql1);
+$row = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
+
+
+
+$sql = "DELETE FROM PRODUCTO WHERE IDPRODUCTO='$idProducto'";
 $resultado = $mysqli->query($sql);
 ?>
 
@@ -25,7 +31,8 @@ $resultado = $mysqli->query($sql);
             <?php } else { ?>
                 <h3>ERROR AL ELIMINAR</h3>
             <?php } ?>
-            <a href="../Mostrar.php" class="btn btn-primary">Regresar</a>
+            <a href="MostrarP.php?idEmpresa=<?php echo $row['IDEMPRESA']?>" class="btn btn-primary">Regresar</a>
+
         </div>
     </div>
 </div>

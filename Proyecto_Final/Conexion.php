@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli('localhost', 'root', '', 'blabowl');
+$mysqli = new mysqli('db4free.net', 'software', '12345678', 'labowlfinal');
 
 if($mysqli->connect_error){
 
