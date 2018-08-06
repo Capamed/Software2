@@ -95,7 +95,6 @@ $idEmpresa=$mysqli->insert_id; //esta funcion me trae el ID que se haya insertad
             <?php } ?>
 
             <a href="Mostrar.php" class="btn btn-primary">Regresar</a>
-
         </div>
     </div>
 </div>

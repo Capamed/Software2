@@ -41,9 +41,15 @@
 <br/>
 <br/>
 <br/>
-<br/>
+
 
 <div class="container">
+    <div class="row">
+        <h3 style="text-align:center">NUEVO REGISTRO DE EMPRESA</h3>
+    </div>
+
+    <br/>
+    <br/>
 
     <form class="form-horizontal" method="POST" action="GuardarE.php"
           enctype="multipart/form-data"  autocomplete="ON"> <!--enctype nos va a permitir agregar Y ENVIAR archivos o imagenes en un input de tipo file.-->
@@ -104,7 +110,6 @@
                 <input type="file" class="form-control" id="archivo" name="archivo" > <!--accept permite aceptar un tipo especifico de archivos
             </div>
         </div>-->
-
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">

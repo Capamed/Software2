@@ -49,9 +49,13 @@ $row = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
 
 <br/>
 <br/>
-<br/>
 
 <div class="container">
+    <div class="row">
+        <h3 style="text-align:center">MODIFICAR REGISTRO DE LA EMPRESA</h3>
+    </div>
+
+    <br/>
 
     <form class="form-horizontal" method="POST" action="ModificarE.php" autocomplete="off">
 
