@@ -11,6 +11,7 @@ $row = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
 
 $sql = "DELETE FROM PRODUCTO WHERE IDPRODUCTO='$idProducto'";
 $resultado = $mysqli->query($sql);
+
 ?>
 
 <html lang="es">
