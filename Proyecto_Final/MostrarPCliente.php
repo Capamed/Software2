@@ -124,7 +124,7 @@
             <?php while($row = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) { ?>
                 <tr valign="middle" align="center">
                     <td>
-                        <a href="Producto/MostrarEtiqueta.php?idProducto=<?php echo $row['IDPRODUCTO']; ?>"><span class="btn btn-primary">Mostrar Etiqueta</span></a>
+                        <a href="MostrarEtiquetaProduc.php?idProducto=<?php echo $row['IDPRODUCTO']; ?>"><span class="btn btn-primary">Mostrar Etiqueta</span></a>
                     </td>
                     <td><?php echo $row['IDPRODUCTO']; ?></td>
                     <td><?php echo $row['IDEMPRESA']; ?></td>
