@@ -14,25 +14,24 @@
 
 
     <?php  //Implementacion para el comando Buscar
+
+    $idEmpresa = $_GET['idEmpresa'];
     require 'Conexion.php';
     $where = "";
-
     if(!empty($_POST)) //cuando la variable Post este vacia
     {
         $valor = $_POST['campo'];
         if(!empty($valor)){
-            $where = "WHERE NOMBREE LIKE '%$valor%' OR IDEMPRESA LIKE '%$valor%'";
+            $where = "WHERE NOMBREP LIKE '%$valor%' OR IDPRODUCTO LIKE '%$valor%'";
         }
     }
-    $sql = "SELECT * FROM Empresa $where";
+    $sql = "SELECT * FROM PRODUCTO $where";
     $resultado = $mysqli->query($sql);
     ?>
 </head>
 
-
-
-
 <body>
+
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <img src="Imagenes/IconoEmpresa.ico" width="50"/>
@@ -43,7 +42,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#EMPRESAS ASOCIADAS A LABOWL">EMPRESAS ASOCIADAS A LABOWL<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#PRODUCTOS REGISTRADOS">PRODUCTOS REGISTRADOS<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href=""></a>
@@ -63,37 +62,59 @@
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
 
 <div class="container"> <!--agregar un contenedor-->
+
     <div class="row"> <!--nueva fila-->
-        <h2 style="text-align:center">EMPRESAS ASOCIADAS A LABOWL</h2> <!--encabezado-->
+        <h2 style="text-align:center">PRODUCTOS REGISTRADOS</h2> <!--encabezado-->
     </div>
+
 
 
     <div class="row">
         <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST"> <!--Accion al mismo script-->
             <br><br>
-            <input type="text" id="campo" name="campo" placeholder="Nombre o ID de empresa"/>
+            <input type="text" id="campo" name="campo" placeholder="Nombre o ID del Producto"/>
             <input type="submit" id="enviar" name="enviar" value="Buscar" class="btn btn-info" />
         </form>
     </div>
     <br>
 
+
     <div class="row table-wrapper-scroll-y">
-        <table class="table table-striped table-bordered text-center" >
+        <table class="table table-striped table-bordered text-center">
             <thead> <!-- cabecera -->
             <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Nickname</th>
-                <th>Password</th>
-                <th>Dirección</th>
-                <th>Teléfono</th>
-                <th>Email</th>
                 <th>Acciones</th> <!-- columna vacia para agregar los botones de modificar y eliminar-->
+                <th>ID</th>
+                <th>ID Empresa</th>
+                <th>Nombre</th>
+                <th>Cantidad g/ml</th>
+                <th>Porciones</th>
+                <th>Energía kcal</th>
+                <th>Grasa g</th>
+                <th>Grasa Saturada g</th>
+                <th>Colesterol mg</th>
+                <th>Sal g</th>
+                <th>Sodio g</th>
+                <th>Carbohidratos g</th>
+                <th>Fibra Dietética g</th>
+                <th>Azúcar g</th>
+                <th>Proteínas g</th>
+                <th>Hierro mg</th>
+                <th>Vitam A mcg</th>
+                <th>Vitam C mcg</th>
+                <th>Vitam D mcg</th>
+                <th>Vitam B1 mcg</th>
+                <th>Vitam B2 mcg</th>
+                <th>Vitam B12 mcg</th>
+                <th>Vitam B6 mcg</th>
+                <th>Calcio mg</th>
+                <th>Fosforo mg</th>
+                <th>Magnesio mg</th>
+                <th>Zinc mg</th>
+                <th>Potasio mg</th>
+
 
             </tr>
             </thead>
@@ -101,16 +122,39 @@
             <tbody>
 
             <?php while($row = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) { ?>
-                <tr>
+                <tr valign="middle" align="center">
+                    <td>
+                        <a href="Producto/MostrarEtiqueta.php?idProducto=<?php echo $row['IDPRODUCTO']; ?>"><span class="btn btn-primary">Mostrar Etiqueta</span></a>
+                    </td>
+                    <td><?php echo $row['IDPRODUCTO']; ?></td>
                     <td><?php echo $row['IDEMPRESA']; ?></td>
-                    <td><?php echo $row['NOMBREE']; ?></td>
-                    <td><?php echo $row['NICKNAMEE']; ?></td>
-                    <td><?php echo $row['PASSWORDE']; ?></td>
-                    <td><?php echo $row['DIRECCION']; ?></td>
-                    <td><?php echo $row['TELEFONO']; ?></td>
-                    <td><?php echo $row['EMAIL']; ?></td>
-                    <td ><a href="Empresa/EmpresaM.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-pencil"></span></a>      |
-                        <a href="Empresa/EliminarE.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-trash"></span></a></td>
+                    <td><?php echo $row['NOMBREP']; ?></td>
+                    <td><?php echo $row['CANTIDAD']; ?></td>
+                    <td><?php echo $row['PORCION']; ?></td>
+                    <td><?php echo $row['ENERGIA']; ?></td>
+                    <td><?php echo $row['GRASA']; ?></td>
+                    <td><?php echo $row['GRASASATURADA']; ?></td>
+                    <td><?php echo $row['COLESTEROL']; ?></td>
+                    <td><?php echo $row['SAL']; ?></td>
+                    <td><?php echo $row['SODIO']; ?></td>
+                    <td><?php echo $row['CARBOHIDRATOS']; ?></td>
+                    <td><?php echo $row['FIBRADIETETICA']; ?></td>
+                    <td><?php echo $row['AZUCAR']; ?></td>
+                    <td><?php echo $row['PROTEINAS']; ?></td>
+                    <td><?php echo $row['HIERRO']; ?></td>
+                    <td><?php echo $row['VITAMINAA']; ?></td>
+                    <td><?php echo $row['VITAMINAC']; ?></td>
+                    <td><?php echo $row['VITAMINAD']; ?></td>
+                    <td><?php echo $row['VITAMINAB1']; ?></td>
+                    <td><?php echo $row['VITAMINAB2']; ?></td>
+                    <td><?php echo $row['VITAMINAB12']; ?></td>
+                    <td><?php echo $row['VITAMINAB6']; ?></td>
+                    <td><?php echo $row['CALCIO']; ?></td>
+                    <td><?php echo $row['FOSFORO']; ?></td>
+                    <td><?php echo $row['MAGNESIO']; ?></td>
+                    <td><?php echo $row['ZINC']; ?></td>
+                    <td><?php echo $row['POTASIO']; ?></td>
+
 
                 </tr>
             <?php } ?>
@@ -122,13 +166,7 @@
 
     <br> <br>
 
-    <div style="text-align: center;width:220px">
-        <a href="Empresa/EmpresaG.php" class="btn btn-primary" >Nuevo Registro</a>
-        <a href="Index.html" class="btn btn-primary" >Retornar</a>
-    </div>
 </div>
-
-
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
