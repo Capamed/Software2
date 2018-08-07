@@ -1,0 +1,18 @@
+#semaforo{
+    position: relative;
+    top: 100px;
+
+    display: inline-list-item;
+}
+
+.SemaforoSODIO{
+    position: relative;
+    top: 100px;
+
+}
+.SemaforoAZUCAR{
+    top: 400px;
+}
+.SemaforoGRASA{
+    top: 500px;
+}
