@@ -106,7 +106,6 @@
                     <td >
                         <a href="Empresa/EmpresaM.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-pencil"></span></a>      |
                         <a href="EliminarE?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-trash"></span></a> <br>
-                        <a href="Producto/MostrarP.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="btn btn-primary">Mostrar Productos</span></a>
 
                     </td>
                     <td><?php echo $row['IDEMPRESA']; ?></td>
@@ -130,7 +129,6 @@
 
     <div style="text-align: right;width:220px">
         <a href="Empresa/EmpresaG.php" class="btn btn-primary" >Nuevo Registro</a>
-        <a href="Index.html" class="btn btn-primary" >Retornar</a>
     </div>
 </div>
 <!-- Bootstrap core JavaScript

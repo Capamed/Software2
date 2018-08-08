@@ -66,13 +66,13 @@ while($row1 = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
 <div class="SemaforoGRASA" >
     <?php
     if($variableGRASA == 'ALTO'){
-        echo "<img src='Imagenes/caritaROJO.png'  width='90'>";
+        echo "<img src='Imagenes/caritaROJO.png'  width='75'>";
         echo "<h3 style=\"color: red; font-family: Verdana; font-size: 10px; font-weight: bold;\">ALTO EN GRASA</h3>";
     }else if($variableGRASA == 'MEDIO'){
-        echo "<img src='Imagenes/caritaAMARILLA.png'  width='100'>";
+        echo "<img src='Imagenes/caritaAMARILLA.png'  width='85'>";
         echo "<h3 style=\"color: gold; font-family: Verdana; font-size: 10px; font-weight: bold;\">MEDIO EN GRASA</h3>";
     }else{
-        echo "<img src='Imagenes/caritaVERDE.png' width='90'>";
+        echo "<img src='Imagenes/caritaVERDE.png' width='75'>";
         echo "<h3 style=\"color: greenyellow; font-family: Verdana; font-size: 10px; font-weight: bold;\">BAJO EN GRASA</h3>";
     }
     ?>

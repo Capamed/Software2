@@ -176,16 +176,7 @@
     <br> <br>
 
     <div style="text-align: right;width:220px">
-
-
-
-
         <a href="ProductoG.php?idEmpresa=<?php echo $idEmpresa ?>"><span class="btn btn-primary">Nuevo Registro</span></a>
-
-
-        <a href="Index.html" class="btn btn-primary" >Página Principal</a>
-
-
     </div>
 </div>
 

@@ -156,7 +156,24 @@ $resultado1 = $mysqli->query($sql1);
 <br/>
 <br/>
 <br/>
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <div class="container">
     <div class="row">
         <div class="row" style="text-align:center">
@@ -165,7 +182,8 @@ $resultado1 = $mysqli->query($sql1);
             <?php } else { ?>
                 <h3>ERROR AL GUARDAR O AL GENERAR ETIQUETAS</h3>
             <?php } ?>
-
+            <br>
+            <br>
             <a href="MostrarP.php?idEmpresa=<?php echo $idEmpresa?>" class="btn btn-primary">Regresar</a>
 
         </div>

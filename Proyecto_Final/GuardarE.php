@@ -83,11 +83,15 @@ $idEmpresa=$mysqli->insert_id; //esta funcion me trae el ID que se haya insertad
         </form>
     </nav>
 </header>
-
 <br/>
 <br/>
 <br/>
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <div class="container">
     <div class="row">
         <div class="row" style="text-align:center">
@@ -96,7 +100,8 @@ $idEmpresa=$mysqli->insert_id; //esta funcion me trae el ID que se haya insertad
             <?php } else { ?>
                 <h3>ERROR AL GUARDAR</h3>
             <?php } ?>
-
+            <br>
+            <br>
             <a href="Mostrar.php" class="btn btn-primary">Regresar</a>
         </div>
     </div>
