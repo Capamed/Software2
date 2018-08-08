@@ -57,8 +57,10 @@ while($row = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
 <br/>
 <br/>
 <br/>
-
-<h2>SEMAFORO</h2>
+<div class="ObjetoSemaforo">
+<h2 class="TituloSemaforo">SEMÁFORO<br>NUTRICIONAL</h2>
+<br/>
+<div class="SEMAFORO">
 <div class="SemaforoGRASA" >
     <?php
     if($variableGRASA == 'ALTO'){
@@ -70,15 +72,14 @@ while($row = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
     }
     ?>
 </div>
-<div id="semaforo">
 <div class="SemaforoAZUCAR" >
     <?php
     if($variableAZUCAR == 'ALTO'){
-        echo "<li<img src='Imagenes/caritaROJO.png'  width='150' ></li>";
+        echo "<img src='Imagenes/caritaROJO.png'  width='150' >";
     }else if($variableAZUCAR == 'MEDIO'){
-        echo "<li<img src='Imagenes/caritaAMARILLA.png'  width='160' ></li>";
+        echo "<img src='Imagenes/caritaAMARILLA.png'  width='160' >";
     }else{
-        echo "<li<img src='Imagenes/caritaVERDE.png' width='150'></li>";
+        echo "<img src='Imagenes/caritaVERDE.png' width='150'>";
     }
     ?>
 </div>
@@ -86,13 +87,14 @@ while($row = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
 <div class="SemaforoSODIO" >
     <?php
     if($variableSODIO == 'ALTO'){
-        echo "<li<img src='Imagenes/caritaROJO.png'  width='150' ></li>";
+        echo "<img src='Imagenes/caritaROJO.png'  width='150' >";
     }else if($variableSODIO == 'MEDIO'){
-        echo "<li<img src='Imagenes/caritaAMARILLA.png'  width='160' ></li>";
+        echo "<img src='Imagenes/caritaAMARILLA.png'  width='160' >";
     }else{
-        echo "<li<img src='Imagenes/caritaVERDE.png' width='150'></li>";
+        echo "<img src='Imagenes/caritaVERDE.png' width='150'>";
     }
     ?>
+</div>
 </div>
 </div>
 
@@ -124,7 +126,5 @@ while($row = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
 <script src="../../dist/js/bootstrap.min.js"></script>
 <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
 <script src="../../assets/js/vendor/holder.min.js"></script>
-<!--Música-->
-<embed src="Música/Musica%20espacial.%20Galaxias.%20Relaxing%20music.%20Musica%20relajante-%5BAudioTrimmer.com%5D%20(1).mp3" width="1" height="1"  autostar="false" loop="true">
 </body>
 </html>
