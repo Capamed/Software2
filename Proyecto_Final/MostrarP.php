@@ -131,9 +131,7 @@
 
                         <a href="mostrarEtiquetaEmpresa.php?idProducto=<?php echo $row['IDPRODUCTO']; ?>"><span class="btn btn-primary">Mostrar Etiqueta</span></a>
 
-                        <a href="MostrarEtiquetaEmpresa.php?idProducto=<?php echo $row['IDPRODUCTO']; ?>"><span class="btn btn-primary">Mostrar Etiqueta</span></a>
-
-
+                      
                     </td>
                     <td><?php echo $row['IDPRODUCTO']; ?></td>
                     <td><?php echo $row['IDEMPRESA']; ?></td>
