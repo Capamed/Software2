@@ -71,13 +71,13 @@ while($row = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
     <?php
     if($variableGRASA == 'ALTO'){
         echo "<img src='Imagenes/caritaROJO.png'  width='150'>";
-        echo "<h3>ALTO</h3>";
+        echo "<h3 style=\"color: red; font-family: Verdana; font-size: 45px;\">ALTO</h3>";
     }else if($variableGRASA == 'MEDIO'){
         echo "<img src='Imagenes/caritaAMARILLA.png'  width='160'>";
-        echo "<h3>MEDIO</h3>";
+        echo "<h3 style=\"color: gold; font-family: Verdana; font-size: 45px;\">MEDIO</h3>";
     }else{
         echo "<img src='Imagenes/caritaVERDE.png' width='150'>";
-        echo "<h3>BAJO</h3>";
+        echo "<h3 style=\"color: greenyellow; font-family: Verdana; font-size: 45px;\">BAJO</h3>";
     }
     ?>
 </div>
@@ -85,13 +85,13 @@ while($row = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
     <?php
     if($variableAZUCAR == 'ALTO'){
         echo "<img src='Imagenes/caritaROJO.png'  width='150' >";
-        echo "<h3>ALTO</h3>";
+        echo "<h3 style=\"color: red; font-family: Verdana; font-size: 45px;\">ALTO</h3>";
     }else if($variableAZUCAR == 'MEDIO'){
         echo "<img src='Imagenes/caritaAMARILLA.png'  width='160' >";
-        echo "<h3>MEDIO</h3>";
+        echo "<h3 style=\"color: gold; font-family: Verdana; font-size: 45px;\">MEDIO</h3>";
     }else{
         echo "<img src='Imagenes/caritaVERDE.png' width='150'>";
-        echo "<h3>BAJO</h3>";
+        echo "<h3 style=\"color: greenyellow; font-family: Verdana; font-size: 45px;\">BAJO</h3>";
     }
     ?>
 </div>
@@ -100,19 +100,20 @@ while($row = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
     <?php
     if($variableSODIO == 'ALTO'){
         echo "<img src='Imagenes/caritaROJO.png'  width='150' >";
-        echo "<h3>ALTO</h3>";
+        echo "<h3 style=\"color: red; font-family: Verdana; font-size: 45px;\">ALTO</h3>";
+
+
     }else if($variableSODIO == 'MEDIO'){
         echo "<img src='Imagenes/caritaAMARILLA.png'  width='160' >";
-        echo "<h3>MEDIO</h3>";
+        echo "<h3 style=\"color: gold; font-family: Verdana; font-size: 45px;\">MEDIO</h3>";
     }else{
         echo "<img src='Imagenes/caritaVERDE.png' width='150'>";
-        echo "<h3>BAJO</h3>";
+        echo "<h3 style=\"color: greenyellow; font-family: Verdana; font-size: 45px;\">BAJO</h3>";
     }
     ?>
 </div>
 </div></center>
 </div>
-
 <div class="col-md-6">.col-md-6</div>
 
 
