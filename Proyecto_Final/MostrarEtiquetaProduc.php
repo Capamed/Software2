@@ -43,9 +43,7 @@ while($row1 = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
                     <a class="nav-link" href="#Semáforo Nutricional">Semáforo Nutricional<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
-            <form class="form-inline mt-2 mt-md-0">
-                <a href="Index.html" class="btn btn-outline-success my-2 my-sm-0">Cerrar Sesión</a>
-            </form>
+
         </div>
     </nav>
 </header>
@@ -55,13 +53,14 @@ while($row1 = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
 <br/>
 <br/>
 
-
+<br/>
+<br/>
 
 <div class="row">
 
 <div class="col-md-6" id="ParteSemaforo">
 
-    <center><h2 class="TituloSemaforo">SEMÁFORO<br>NUTRICIONAL</h2>
+    <center><h2 style="color: black; font-family: Verdana; font-size: 35px;">SEMÁFORO<br>NUTRICIONAL</h2>
     <br/>
 <div class="SEMAFORO">
 <div class="SemaforoGRASA" >
@@ -111,32 +110,23 @@ while($row1 = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
 </div>
 </div></center>
 </div>
-<div class="col-md-6">.col-md-6</div>
-
-</div>
-
-
-
-<!-- ETIQUETA
-    ================================================== -->
-
-<div class="container" align="center"> <!--agregar un contenedor-->
-    <div class="row"> <!--nueva fila-->
-        <h2 align="center">ETIQUETA NUTRICIONAL </h2> <!--encabezado-->
-    </div>
+<div class="col-md-6">
+    <br>
+    <br>
+    <span></span><h2 style="color: black; font-family: Verdana; font-size: 35px;" >ETIQUETA NUTRICIONAL </h2> <!--encabezado-->
     <br><br>
 
     <div class="row table-striped">
-        <table class="table table-striped table-bordered text-center" style="width: 50% " border="5px solid">
+        <table class="table table-striped table-bordered text-center" style="width: 75% " border="5px solid">
             <!-- cabecera -->
             <?php while($row = mysqli_fetch_array($resultado1,MYSQLI_ASSOC)) { ?>
 
-                <tr><th> Energía Total</th><td><?php echo $row['ENERGIAT']; ?> g </td></tr>
-                <tr><th> Grasa Total</th><td><?php echo $row['GRASAT']; ?> g </td></tr>
-                <tr><th> Colesterol</th><td><?php echo $row['COLESTEROLT']; ?> mg </td></tr>
-                <tr><th> Sodio</th><td><?php echo $row['SODIOT']; ?> g </td></tr>
-                <tr><th> Carbohidratos Totales</th><td><?php echo $row['CARBOHIDRATOT']; ?> g </td></tr>
-                <tr><th> Proteínas</th><td><?php echo $row['PROTEINAT']; ?> g </td></tr>
+                <tr><th style="color: blue; font-family: Verdana; font-size: 25px"> Energía Total</th><td style="color: black; font-family: Verdana; font-size: 25px"><?php echo $row['ENERGIAT']; ?> g </td></tr>
+                <tr><th  style="color: blue; font-family: Verdana; font-size: 25px"> Grasa Total</th><td style="color: black; font-family: Verdana; font-size: 25px"><?php echo $row['GRASAT']; ?> g </td></tr>
+                <tr><th style="color: blue; font-family: Verdana; font-size: 25px"> Colesterol</th><td style="color: black; font-family: Verdana; font-size: 25px"><?php echo $row['COLESTEROLT']; ?> mg </td></tr>
+                <tr><th style="color: blue; font-family: Verdana; font-size: 25px"> Sodio</th><td style="color: black; font-family: Verdana; font-size: 25px"><?php echo $row['SODIOT']; ?> g </td></tr>
+                <tr><th style="color: blue; font-family: Verdana; font-size: 25px"> Carbohidratos Totales</th><td style="color: black; font-family: Verdana; font-size: 25px"><?php echo $row['CARBOHIDRATOT']; ?> g </td></tr>
+                <tr><th style="color: blue; font-family: Verdana; font-size: 25px"> Proteínas</th><td style="color: black; font-family: Verdana; font-size: 25px"><?php echo $row['PROTEINAT']; ?> g </td></tr>
 
             <?php } ?>
 
@@ -145,10 +135,18 @@ while($row1 = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
     </div>
 
     <br>
-    <div style="text-align: left;width:220px">
-        <a href="MostrarPCliente.php" class="btn btn-primary" >Retornar</a>
+    <div style="text-align: center;">
+        <a href="MostrarPCliente.php" class="btn btn-primary btn-lg"style="width: 200px; height: 50px;font-size: 25px">Regresar</a>
     </div>
 </div>
+
+</div>
+
+
+
+
+
+
 
 
     <!-- Bootstrap core JavaScript
