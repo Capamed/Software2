@@ -57,9 +57,15 @@ while($row = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
 <br/>
 <br/>
 <br/>
-<div class="ObjetoSemaforo">
-<h2 class="TituloSemaforo">SEMÁFORO<br>NUTRICIONAL</h2>
-<br/>
+
+
+
+<div class="row">
+
+<div class="col-md-6">
+
+    <h2 class="TituloSemaforo">SEMÁFORO<br>NUTRICIONAL</h2>
+    <br/>
 <div class="SEMAFORO">
 <div class="SemaforoGRASA" >
     <?php
@@ -98,8 +104,10 @@ while($row = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
 </div>
 </div>
 
+<div class="col-md-6">.col-md-6</div>
 
 
+</div>
 
 
 
