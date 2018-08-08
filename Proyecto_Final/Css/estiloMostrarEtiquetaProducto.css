@@ -16,11 +16,3 @@
     padding: 20px;
     z-index: 5;  top: 50em; left: 8.5em;
 }
-.TituloSemaforo{
-    color: #0f0f0f;
-    text-shadow: 1px 1px 10px whitesmoke;
-    left: 200px;
-}
-
-#ParteSemaforo{
-}

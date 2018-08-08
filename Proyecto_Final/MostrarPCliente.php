@@ -51,9 +51,6 @@
                     <a class="nav-link" href=""></a>
                 </li>
             </ul>
-            <form class="form-inline mt-2 mt-md-0">
-                <a href="Index.html" class="btn btn-outline-success my-2 my-sm-0">Cerrar Sesión</a>
-            </form>
         </div>
     </nav>
 </header>
@@ -166,6 +163,9 @@
 
     <br> <br>
 
+</div>
+<div style="text-align: center;">
+    <a href="Index.html" class="btn btn-primary btn-lg"style="width: 200px; height: 50px;font-size: 25px">Página Principal</a>
 </div>
 
 <!-- Bootstrap core JavaScript
