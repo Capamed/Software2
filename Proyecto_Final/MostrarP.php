@@ -128,7 +128,7 @@
                 <tr valign="middle" align="center">
                     <td><a href="ProductoM.php?idProducto=<?php echo $row['IDPRODUCTO']; ?>"><span class="glyphicon glyphicon-pencil"></span></a>      |
                         <a href="EliminarP.php?idProducto=<?php echo $row['IDPRODUCTO']; ?>"><span class="glyphicon glyphicon-trash"></span></a>
-                        <a href="mostrarEtiquetaProduc.php?idProducto=<?php echo $row['IDPRODUCTO']; ?>"><span class="btn btn-primary">Mostrar Etiqueta</span></a>
+                        <a href="mostrarEtiquetaEmpresa.php?idProducto=<?php echo $row['IDPRODUCTO']; ?>"><span class="btn btn-primary">Mostrar Etiqueta</span></a>
 
                     </td>
                     <td><?php echo $row['IDPRODUCTO']; ?></td>
@@ -179,11 +179,9 @@
 
 
         <a href="ProductoG.php?idEmpresa=<?php echo $idEmpresa ?>"><span class="btn btn-primary">Nuevo Registro</span></a>
-<<<<<<< HEAD
-        <a href="Mostrar.php" class="btn btn-primary" >Página Principal</a>
-=======
-        <a href="MostrarP.php" class="btn btn-primary" >Retornar</a>
->>>>>>> 72724fef747262cf548dfb60cee5aeb200cebb1d
+
+        <a href="MostrarP.php" class="btn btn-primary" >Página Principal</a>
+
     </div>
 </div>
 
