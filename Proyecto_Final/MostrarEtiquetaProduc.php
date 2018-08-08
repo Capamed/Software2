@@ -29,7 +29,7 @@ while($row1 = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
 ?>
 </head>
 
-<body background="Imagenes/ImagenFondo9.jpg" width="100px">
+<body background="Imagenes/ImagenFondo9.jpg">
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <img src="Imagenes/IconoEmpresa.ico" width="50"/>
@@ -60,34 +60,34 @@ while($row1 = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
 
 <div class="col-md-6" id="ParteSemaforo">
 
-    <center><h2 style="color: black; font-family: Verdana; font-size: 35px;">SEMÁFORO<br>NUTRICIONAL</h2>
+    <center><h2 style="color: black; font-family: Verdana; font-size: 35px;  font-weight: bold;">SEMÁFORO<br>NUTRICIONAL</h2>
     <br/>
 <div class="SEMAFORO">
 <div class="SemaforoGRASA" >
     <?php
     if($variableGRASA == 'ALTO'){
         echo "<img src='Imagenes/caritaROJO.png'  width='90'>";
-        echo "<h3 style=\"color: red; font-family: Verdana; font-size: 20px;\">ALTO EN GRASA</h3>";
+        echo "<h3 style=\"color: red; font-family: Verdana; font-size: 10px; font-weight: bold;\">ALTO EN GRASA</h3>";
     }else if($variableGRASA == 'MEDIO'){
         echo "<img src='Imagenes/caritaAMARILLA.png'  width='100'>";
-        echo "<h3 style=\"color: gold; font-family: Verdana; font-size: 20px;\">MEDIO EN GRASA</h3>";
+        echo "<h3 style=\"color: gold; font-family: Verdana; font-size: 10px; font-weight: bold;\">MEDIO EN GRASA</h3>";
     }else{
         echo "<img src='Imagenes/caritaVERDE.png' width='90'>";
-        echo "<h3 style=\"color: greenyellow; font-family: Verdana; font-size: 20px;\">BAJO EN GRASA</h3>";
+        echo "<h3 style=\"color: greenyellow; font-family: Verdana; font-size: 10px; font-weight: bold;\">BAJO EN GRASA</h3>";
     }
     ?>
 </div>
 <div class="SemaforoAZUCAR" >
     <?php
     if($variableAZUCAR == 'ALTO'){
-        echo "<img src='Imagenes/caritaROJO.png'  width='90' >";
-        echo "<h3 style=\"color: red; font-family: Verdana; font-size: 20px;\">ALTO EN AZÚCAR</h3>";
+        echo "<img src='Imagenes/caritaROJO.png'  width='75' >";
+        echo "<h3 style=\"color: red; font-family: Verdana; font-size: 10px; font-weight: bold;\">ALTO EN AZÚCAR</h3>";
     }else if($variableAZUCAR == 'MEDIO'){
-        echo "<img src='Imagenes/caritaAMARILLA.png'  width='100' >";
-        echo "<h3 style=\"color: gold; font-family: Verdana; font-size: 20px;\">MEDIO EN AZÚCAR</h3>";
+        echo "<img src='Imagenes/caritaAMARILLA.png'  width='85' >";
+        echo "<h3 style=\"color: gold; font-family: Verdana; font-size: 10px; font-weight: bold;\">MEDIO EN AZÚCAR</h3>";
     }else{
-        echo "<img src='Imagenes/caritaVERDE.png' width='90'>";
-        echo "<h3 style=\"color: greenyellow; font-family: Verdana; font-size: 20px;\">BAJO EN AZÚCAR</h3>";
+        echo "<img src='Imagenes/caritaVERDE.png' width='75'>";
+        echo "<h3 style=\"color: greenyellow; font-family: Verdana; font-size: 10px;  font-weight: bold;\">BAJO EN AZÚCAR</h3>";
     }
     ?>
 </div>
@@ -95,16 +95,16 @@ while($row1 = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
 <div class="SemaforoSODIO" >
     <?php
     if($variableSODIO == 'ALTO'){
-        echo "<img src='Imagenes/caritaROJO.png'  width='90' >";
-        echo "<h3 style=\"color: red; font-family: Verdana; font-size: 20px;\">ALTO EN SAL</h3>";
+        echo "<img src='Imagenes/caritaROJO.png'  width='75' >";
+        echo "<h3 style=\"color: red; font-family: Verdana; font-size: 10px;  font-weight: bold;\">ALTO EN SAL</h3>";
 
 
     }else if($variableSODIO == 'MEDIO'){
-        echo "<img src='Imagenes/caritaAMARILLA.png'  width='100' >";
-        echo "<h3 style=\"color: gold; font-family: Verdana; font-size: 20px;\">MEDIO EN SAL</h3>";
+        echo "<img src='Imagenes/caritaAMARILLA.png'  width='85' >";
+        echo "<h3 style=\"color: gold; font-family: Verdana; font-size: 10px;  font-weight: bold;\">MEDIO EN SAL</h3>";
     }else{
-        echo "<img src='Imagenes/caritaVERDE.png' width='90'>";
-        echo "<h3 style=\"color: greenyellow; font-family: Verdana; font-size: 20px;\">BAJO EN SAL</h3>";
+        echo "<img src='Imagenes/caritaVERDE.png' width='75'>";
+        echo "<h3 style=\"color: greenyellow; font-family: Verdana; font-size: 10px;  font-weight: bold;\">BAJO EN SAL</h3>";
     }
     ?>
 </div>
@@ -113,7 +113,7 @@ while($row1 = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
 <div class="col-md-6">
     <br>
     <br>
-    <span></span><h2 style="color: black; font-family: Verdana; font-size: 35px;" >ETIQUETA NUTRICIONAL </h2> <!--encabezado-->
+    <span></span><h2 style="color: black; font-family: Verdana; font-size: 35px; font-weight: bold;" >ETIQUETA NUTRICIONAL </h2> <!--encabezado-->
     <br><br>
 
     <div class="row table-striped">
