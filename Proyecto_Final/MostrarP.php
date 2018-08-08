@@ -179,7 +179,7 @@
 
 
         <a href="ProductoG.php?idEmpresa=<?php echo $idEmpresa ?>"><span class="btn btn-primary">Nuevo Registro</span></a>
-        <a href="Mostrar.php" class="btn btn-primary" >Retornar</a>
+        <a href="Mostrar.php" class="btn btn-primary" >Página Principal</a>
     </div>
 </div>
 
