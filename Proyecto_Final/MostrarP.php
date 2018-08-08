@@ -128,11 +128,11 @@
                 <tr valign="middle" align="center">
                     <td><a href="ProductoM.php?idProducto=<?php echo $row['IDPRODUCTO']; ?>"><span class="glyphicon glyphicon-pencil"></span></a>      |
                         <a href="EliminarP.php?idProducto=<?php echo $row['IDPRODUCTO']; ?>"><span class="glyphicon glyphicon-trash"></span></a>
-<<<<<<< HEAD
+
                         <a href="mostrarEtiquetaEmpresa.php?idProducto=<?php echo $row['IDPRODUCTO']; ?>"><span class="btn btn-primary">Mostrar Etiqueta</span></a>
-=======
+
                         <a href="MostrarEtiquetaEmpresa.php?idProducto=<?php echo $row['IDPRODUCTO']; ?>"><span class="btn btn-primary">Mostrar Etiqueta</span></a>
->>>>>>> 96d5986b51ca6cde5698de1f41c4fa6b8a040b12
+
 
                     </td>
                     <td><?php echo $row['IDPRODUCTO']; ?></td>
