@@ -62,19 +62,22 @@ while($row = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
 
 <div class="row">
 
-<div class="col-md-6">
+<div class="col-md-6" id="ParteSemaforo">
 
-    <h2 class="TituloSemaforo">SEMÁFORO<br>NUTRICIONAL</h2>
+    <center><h2 class="TituloSemaforo">SEMÁFORO<br>NUTRICIONAL</h2>
     <br/>
 <div class="SEMAFORO">
 <div class="SemaforoGRASA" >
     <?php
     if($variableGRASA == 'ALTO'){
         echo "<img src='Imagenes/caritaROJO.png'  width='150'>";
+        echo "<h3>ALTO</h3>";
     }else if($variableGRASA == 'MEDIO'){
         echo "<img src='Imagenes/caritaAMARILLA.png'  width='160'>";
+        echo "<h3>MEDIO</h3>";
     }else{
         echo "<img src='Imagenes/caritaVERDE.png' width='150'>";
+        echo "<h3>BAJO</h3>";
     }
     ?>
 </div>
@@ -82,10 +85,13 @@ while($row = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
     <?php
     if($variableAZUCAR == 'ALTO'){
         echo "<img src='Imagenes/caritaROJO.png'  width='150' >";
+        echo "<h3>ALTO</h3>";
     }else if($variableAZUCAR == 'MEDIO'){
         echo "<img src='Imagenes/caritaAMARILLA.png'  width='160' >";
+        echo "<h3>MEDIO</h3>";
     }else{
         echo "<img src='Imagenes/caritaVERDE.png' width='150'>";
+        echo "<h3>BAJO</h3>";
     }
     ?>
 </div>
@@ -94,14 +100,17 @@ while($row = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
     <?php
     if($variableSODIO == 'ALTO'){
         echo "<img src='Imagenes/caritaROJO.png'  width='150' >";
+        echo "<h3>ALTO</h3>";
     }else if($variableSODIO == 'MEDIO'){
         echo "<img src='Imagenes/caritaAMARILLA.png'  width='160' >";
+        echo "<h3>MEDIO</h3>";
     }else{
         echo "<img src='Imagenes/caritaVERDE.png' width='150'>";
+        echo "<h3>BAJO</h3>";
     }
     ?>
 </div>
-</div>
+</div></center>
 </div>
 
 <div class="col-md-6">.col-md-6</div>
