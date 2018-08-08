@@ -105,7 +105,7 @@
                 <tr>
                     <td >
                         <a href="Empresa/EmpresaM.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-pencil"></span></a>      |
-                        <a href="EliminarE?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-trash"></span></a> <br>
+                        <a href="EliminarE.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="glyphicon glyphicon-trash"></span></a> <br>
 
                     </td>
                     <td><?php echo $row['IDEMPRESA']; ?></td>

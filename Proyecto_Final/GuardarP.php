@@ -104,8 +104,6 @@ VALUES ('$id_Producto','$energia','$grasaTotal', '$colesterol','$SalTotal','$car
 
 $resultado1 = $mysqli->query($sql1);
 
-
-
 ?>
 
 
