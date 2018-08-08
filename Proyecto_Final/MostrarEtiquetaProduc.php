@@ -29,7 +29,7 @@ while($row1 = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) {
 ?>
 </head>
 
-<body background="Imagenes/ImagenFondo8.jpg">
+<body background="Imagenes/ImagenFondo9.jpg" width="100px">
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <img src="Imagenes/IconoEmpresa.ico" width="50"/>
