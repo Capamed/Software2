@@ -125,7 +125,7 @@ $resultado1 = $mysqli->query($sql1);
 
 </head>
 
-<body>
+<body background="Imagenes/imagen%20fondo%201.jpg">
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <img src="Imagenes/IconoEmpresa.ico" width="50"/>

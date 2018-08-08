@@ -34,7 +34,7 @@ $resultado = $mysqli->query($sql);
 
 </head>
 
-<body>
+<body background="Imagenes/ImagenFondo4.jpg">
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <img src="Imagenes/IconoEmpresa.ico" width="50"/>
