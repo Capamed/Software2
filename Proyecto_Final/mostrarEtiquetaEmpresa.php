@@ -66,28 +66,28 @@
                 <div class="SemaforoGRASA" >
                     <?php
                     if($variableGRASA == 'ALTO'){
-                        echo "<img src='Imagenes/caritaROJO.png'  width='150'>";
-                        echo "<h3 style=\"color: red; font-family: Verdana; font-size: 35px;\">ALTO EN GRASA</h3>";
+                        echo "<img src='Imagenes/caritaROJO.png'  width='90'>";
+                        echo "<h3 style=\"color: red; font-family: Verdana; font-size: 20px;\">ALTO EN GRASA</h3>";
                     }else if($variableGRASA == 'MEDIO'){
-                        echo "<img src='Imagenes/caritaAMARILLA.png'  width='160'>";
-                        echo "<h3 style=\"color: gold; font-family: Verdana; font-size: 35px;\">MEDIO EN GRASA</h3>";
+                        echo "<img src='Imagenes/caritaAMARILLA.png'  width='100'>";
+                        echo "<h3 style=\"color: gold; font-family: Verdana; font-size: 20px;\">MEDIO EN GRASA</h3>";
                     }else{
-                        echo "<img src='Imagenes/caritaVERDE.png' width='150'>";
-                        echo "<h3 style=\"color: greenyellow; font-family: Verdana; font-size: 35px;\">BAJO EN GRASA</h3>";
+                        echo "<img src='Imagenes/caritaVERDE.png' width='90'>";
+                        echo "<h3 style=\"color: greenyellow; font-family: Verdana; font-size: 20px;\">BAJO EN GRASA</h3>";
                     }
                     ?>
                 </div>
                 <div class="SemaforoAZUCAR" >
                     <?php
                     if($variableAZUCAR == 'ALTO'){
-                        echo "<img src='Imagenes/caritaROJO.png'  width='150' >";
-                        echo "<h3 style=\"color: red; font-family: Verdana; font-size: 35px;\">ALTO EN AZÚCAR</h3>";
+                        echo "<img src='Imagenes/caritaROJO.png'  width='90' >";
+                        echo "<h3 style=\"color: red; font-family: Verdana; font-size: 20px;\">ALTO EN AZÚCAR</h3>";
                     }else if($variableAZUCAR == 'MEDIO'){
-                        echo "<img src='Imagenes/caritaAMARILLA.png'  width='160' >";
-                        echo "<h3 style=\"color: gold; font-family: Verdana; font-size: 35px;\">MEDIO EN AZÚCAR</h3>";
+                        echo "<img src='Imagenes/caritaAMARILLA.png'  width='100' >";
+                        echo "<h3 style=\"color: gold; font-family: Verdana; font-size: 20px;\">MEDIO EN AZÚCAR</h3>";
                     }else{
-                        echo "<img src='Imagenes/caritaVERDE.png' width='150'>";
-                        echo "<h3 style=\"color: greenyellow; font-family: Verdana; font-size: 35px;\">BAJO EN AZÚCAR</h3>";
+                        echo "<img src='Imagenes/caritaVERDE.png' width='90'>";
+                        echo "<h3 style=\"color: greenyellow; font-family: Verdana; font-size: 20px;\">BAJO EN AZÚCAR</h3>";
                     }
                     ?>
                 </div>
