@@ -31,7 +31,7 @@
 
     $sql2 = "SELECT * FROM PRODUCTO WHERE IDPRODUCTO = '$idPRODUCTO'";
     $resultado2 = $mysqli->query($sql2);
-    $row2 = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
+    $row2 = mysqli_fetch_array($resultado2,MYSQLI_ASSOC);
 
     ?>
 </head>
