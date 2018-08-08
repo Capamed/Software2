@@ -12,8 +12,8 @@
     <link href="Css/estiloMostrarEtiquetaProducto.css" rel="stylesheet">
     <?php
     require 'Conexion.php';
-    $idPRODUCTO = $_GET['idProducto'];
 
+    $idPRODUCTO = $_GET['idProducto'];
     $sql = "SELECT * FROM SEMAFORONUTRIICONAL WHERE IDPRODUCTO ='$idPRODUCTO'";
     $resultado = $mysqli->query($sql);
 
@@ -26,6 +26,13 @@
     $sql1 = "SELECT * FROM ETIQUETANUTRICIONAL WHERE IDPRODUCTO ='$idPRODUCTO'";
 
     $resultado1 = $mysqli->query($sql1);
+
+
+
+    $sql2 = "SELECT * FROM PRODUCTO WHERE IDPRODUCTO = '$idPRODUCTO'";
+    $resultado2 = $mysqli->query($sql2);
+    $row2 = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
+
     ?>
 </head>
 
@@ -136,7 +143,7 @@
 
         <br>
         <div style="text-align: center;">
-            <a href="MostrarP.php?idEmpresa=<?php echo $row['IDEMPRESA']; ?>"><span class="btn btn-primary">Regresar</span></a>
+            <a href="MostrarP.php?idEmpresa=<?php echo $row2['IDEMPRESA']; ?>"><span class="btn btn-primary">Regresar</span></a>
 
 
 
