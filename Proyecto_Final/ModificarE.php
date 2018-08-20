@@ -34,7 +34,7 @@ $resultado = $mysqli->query($sql);
 
 </head>
 
-<body>
+<body background="Imagenes/ImagenFondo4.jpg">
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <img src="Imagenes/IconoEmpresa.ico" width="50"/>
@@ -45,6 +45,9 @@ $resultado = $mysqli->query($sql);
         <div class="collapse navbar-collapse" id="navbarCollapse">
 
         </div>
+        <form class="form-inline mt-2 mt-md-0">
+            <a href="Index.html" class="btn btn-outline-success my-2 my-sm-0">Cerrar Sesión</a>
+        </form>
     </nav>
 </header>
 

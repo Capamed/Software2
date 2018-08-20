@@ -1,0 +1,18 @@
+.SEMAFORO{
+    margin: 5px 5px;
+    width: 230px;
+    border: 10px solid #0f0f0f;
+}
+.SemaforoGRASA{
+    padding: 20px;
+    z-index: 5;  top: 1em; left: 0em;
+}
+
+.SemaforoAZUCAR{
+    padding: 20px;
+    z-index: 5;  top: 20em; left: 8.5em;
+}
+.SemaforoSODIO{
+    padding: 20px;
+    z-index: 5;  top: 50em; left: 8.5em;
+}

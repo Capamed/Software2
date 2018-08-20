@@ -68,7 +68,7 @@ $idEmpresa=$mysqli->insert_id; //esta funcion me trae el ID que se haya insertad
 
 </head>
 
-<body>
+<body background="Imagenes/imagen%20fondo%201.jpg">
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <img src="Imagenes/IconoEmpresa.ico" width="50"/>
@@ -78,27 +78,21 @@ $idEmpresa=$mysqli->insert_id; //esta funcion me trae el ID que se haya insertad
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
         </div>
+        <form class="form-inline mt-2 mt-md-0">
+            <a href="Index.html" class="btn btn-outline-success my-2 my-sm-0">Cerrar Sesión</a>
+        </form>
     </nav>
 </header>
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <br/>
 <br/>
 <br/>
 
-<div class="container">
-    <div class="row">
-        <div class="row" style="text-align:center">
-            <?php if($resultado) { ?>
-                <h3>REGISTRO GUARDADO</h3>
-            <?php } else { ?>
-                <h3>ERROR AL GUARDAR</h3>
-            <?php } ?>
-
-            <a href="Mostrar.php" class="btn btn-primary">Regresar</a>
-
-        </div>
-    </div>
-</div>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -110,6 +104,24 @@ $idEmpresa=$mysqli->insert_id; //esta funcion me trae el ID que se haya insertad
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 <script src="../../assets/js/vendor/popper.min.js"></script>
 <script src="../../dist/js/bootstrap.min.js"></script>
+<br/>
+<br/>
+<br/>
+<br/>
 
 </body>
+<div class="container">
+    <div class="row">
+        <div class="row" style="text-align:center">
+            <?php if($resultado) { ?>
+                <h3>REGISTRO GUARDADO</h3>
+            <?php } else { ?>
+                <h3>ERROR AL GUARDAR</h3>
+            <?php } ?>
+            <br>
+            <br>
+            <a href="Mostrar.php" class="btn btn-primary">Regresar</a>
+        </div>
+    </div>
+</div>
 </html>

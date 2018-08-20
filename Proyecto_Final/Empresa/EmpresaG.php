@@ -31,6 +31,9 @@
                     <a class="nav-link" href=""></a>
                 </li>
             </ul>
+            <form class="form-inline mt-2 mt-md-0">
+                <a href="Index.html" class="btn btn-outline-success my-2 my-sm-0">Cerrar Sesión</a>
+            </form>
         </div>
     </nav>
 </header>
@@ -41,9 +44,13 @@
 <br/>
 <br/>
 <br/>
-<br/>
 
 <div class="container">
+    <div class="row"> <!--nueva fila-->
+        <h2 style="text-align:center">NUEVO REGISTRO DE EMPRESA</h2> <!--encabezado-->
+    </div>
+    <br/>
+    <br/>
 
     <form class="form-horizontal" method="POST" action="GuardarE.php"
           enctype="multipart/form-data"  autocomplete="ON"> <!--enctype nos va a permitir agregar Y ENVIAR archivos o imagenes en un input de tipo file.-->

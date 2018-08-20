@@ -23,7 +23,7 @@ $row = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
 </head>
 
 
-<body>
+<body background="Imagenes/imagen%20fondo%201.jpg">
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <img src="Imagenes/IconoEmpresa.ico" width="50"/>
@@ -43,15 +43,22 @@ $row = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
                     <a class="nav-link" href=""></a>
                 </li>
             </ul>
+            <form class="form-inline mt-2 mt-md-0">
+                <a href="Index.html" class="btn btn-outline-success my-2 my-sm-0">Cerrar Sesión</a>
+            </form>
         </div>
     </nav>
 </header>
 
 <br/>
 <br/>
-<br/>
 
 <div class="container">
+    <div class="row">
+        <h3 style="text-align:center">MODIFICAR REGISTRO DE LA EMPRESA</h3>
+    </div>
+
+    <br/>
 
     <form class="form-horizontal" method="POST" action="ModificarE.php" autocomplete="off">
 

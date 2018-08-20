@@ -77,6 +77,9 @@ $idEmpresa=$mysqli->insert_id; //esta funcion me trae el ID que se haya insertad
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
+            <form class="form-inline mt-2 mt-md-0">
+                <a href="Index.html" class="btn btn-outline-success my-2 my-sm-0">Cerrar Sesión</a>
+            </form>
         </div>
     </nav>
 </header>

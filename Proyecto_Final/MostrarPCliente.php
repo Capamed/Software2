@@ -16,11 +16,8 @@
     <?php  //Implementacion para el comando Buscar
 
     $idEmpresa = $_GET['idEmpresa'];
-
-
-
     require 'Conexion.php';
-    $where = "WHERE IDEMPRESA = '$idEmpresa'";
+    $where = "";
     if(!empty($_POST)) //cuando la variable Post este vacia
     {
         $valor = $_POST['campo'];
@@ -33,7 +30,7 @@
     ?>
 </head>
 
-<body background="Imagenes/imagen%20fondo%201.jpg">
+<body background="Imagenes/ImagenFondo4.jpg">
 
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -54,9 +51,6 @@
                     <a class="nav-link" href=""></a>
                 </li>
             </ul>
-            <form class="form-inline mt-2 mt-md-0">
-                <a href="Index.html" class="btn btn-outline-success my-2 my-sm-0">Cerrar Sesión</a>
-            </form>
         </div>
     </nav>
 </header>
@@ -126,12 +120,8 @@
 
             <?php while($row = mysqli_fetch_array($resultado,MYSQLI_ASSOC)) { ?>
                 <tr valign="middle" align="center">
-                    <td><a href="ProductoM.php?idProducto=<?php echo $row['IDPRODUCTO']; ?>"><span class="glyphicon glyphicon-pencil"></span></a>      |
-                        <a href="EliminarP.php?idProducto=<?php echo $row['IDPRODUCTO']; ?>"><span class="glyphicon glyphicon-trash"></span></a>
-
-                        <a href="mostrarEtiquetaEmpresa.php?idProducto=<?php echo $row['IDPRODUCTO']; ?>"><span class="btn btn-primary">Mostrar Etiqueta</span></a>
-
-
+                    <td>
+                        <a href="MostrarEtiquetaProduc.php?idProducto=<?php echo $row['IDPRODUCTO']; ?>"><span class="btn btn-primary">Mostrar Etiqueta</span></a>
                     </td>
                     <td><?php echo $row['IDPRODUCTO']; ?></td>
                     <td><?php echo $row['IDEMPRESA']; ?></td>
@@ -163,21 +153,19 @@
                     <td><?php echo $row['POTASIO']; ?></td>
 
 
-
-
                 </tr>
             <?php } ?>
 
             </tbody>
 
         </table>
-</div>
+    </div>
 
     <br> <br>
 
-    <div style="text-align: right;width:220px">
-        <a href="ProductoG.php?idEmpresa=<?php echo $idEmpresa ?>"><span class="btn btn-primary">Nuevo Registro</span></a>
-    </div>
+</div>
+<div style="text-align: center;">
+    <a href="Index.html" class="btn btn-primary btn-lg"style="width: 200px; height: 50px;font-size: 25px">Página Principal</a>
 </div>
 
 <!-- Bootstrap core JavaScript

@@ -11,7 +11,7 @@
 
 </head>
 
-<body>
+<body background="Imagenes/ImagenFondo2.jpg">
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <img src="Imagenes/IconoEmpresa.ico" width="50"/>
@@ -31,6 +31,9 @@
                     <a class="nav-link" href=""></a>
                 </li>
             </ul>
+            <form class="form-inline mt-2 mt-md-0">
+                <a href="Index.html" class="btn btn-outline-success my-2 my-sm-0">Cerrar Sesión</a>
+            </form>
         </div>
     </nav>
 </header>
@@ -41,9 +44,15 @@
 <br/>
 <br/>
 <br/>
-<br/>
+
 
 <div class="container">
+    <div class="row">
+        <h3 style="text-align:center">NUEVO REGISTRO DE EMPRESA</h3>
+    </div>
+
+    <br/>
+    <br/>
 
     <form class="form-horizontal" method="POST" action="GuardarE.php"
           enctype="multipart/form-data"  autocomplete="ON"> <!--enctype nos va a permitir agregar Y ENVIAR archivos o imagenes en un input de tipo file.-->
@@ -104,7 +113,6 @@
                 <input type="file" class="form-control" id="archivo" name="archivo" > <!--accept permite aceptar un tipo especifico de archivos
             </div>
         </div>-->
-
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">

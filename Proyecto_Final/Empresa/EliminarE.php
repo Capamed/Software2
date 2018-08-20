@@ -27,11 +27,15 @@ $resultado = $mysqli->query($sql);
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+        <form class="form-inline mt-2 mt-md-0">
+            <a href="Index.html" class="btn btn-outline-success my-2 my-sm-0">Cerrar Sesión</a>
+        </form>
     </nav>
 </header>
 
 <body>
+<br/>
+<br/>
 <br/>
 <br/>
 <br/>
